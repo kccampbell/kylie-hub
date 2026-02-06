@@ -6,35 +6,57 @@ export async function POST(request: NextRequest) {
     const { name, email, company, phone, message } = body;
 
     // Validate required fields
-    if (!name || !email || !message) {
+    if (!name || !email || !message || !company || !phone) {
       return NextResponse.json(
-        { error: 'Name, email, and message are required' },
+        { error: 'Name, email, company, phone, and message are required' },
         { status: 400 }
       );
     }
 
-    // TODO: Add your email sending logic here
-    // Options:
-    // 1. Use Resend, SendGrid, or similar service
-    // 2. Forward to your existing contact API endpoint
-    // 3. Store in database
-    // 4. Send webhook notification
-    
-    // For now, just log it (you can see submissions in Netlify function logs)
-    console.log('Contact form submission:', {
-      name,
-      email,
-      company: company || 'N/A',
-      phone: phone || 'N/A',
-      message,
-      timestamp: new Date().toISOString(),
+    // Validate phone format (international format)
+    const phoneRegex = /^\+[1-9]\d{1,14}$/;
+    if (!phoneRegex.test(phone.replace(/\s/g, ''))) {
+      return NextResponse.json(
+        { error: 'Phone must be in international format (e.g., +61412345678)' },
+        { status: 400 }
+      );
+    }
+
+    // Get backend API URL from environment variable
+    // Default to the AWS API Gateway (kylie-verify-aws), but can be overridden
+    const backendUrl = process.env.CONTACT_API_URL || process.env.NEXT_PUBLIC_CONTACT_API_URL || 'https://webhooks.kylieai.net';
+    const apiUrl = `${backendUrl.replace(/\/+$/, '')}/api/contact`;
+
+    // Clean phone number (remove spaces)
+    const cleanPhone = phone.replace(/\s/g, '');
+
+    // Forward to backend API
+    const response = await fetch(apiUrl, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        name,
+        email,
+        company,
+        phone: cleanPhone,
+        message,
+      }),
     });
 
-    // Simulate processing delay
-    await new Promise(resolve => setTimeout(resolve, 500));
+    const data = await response.json();
+
+    if (!response.ok) {
+      console.error('Backend API error:', data);
+      return NextResponse.json(
+        { error: data.error || 'Failed to send message. Please try again.' },
+        { status: response.status }
+      );
+    }
 
     return NextResponse.json(
-      { message: 'Thank you! Your message has been received.' },
+      { message: data.message || 'Thank you! Your message has been received.' },
       { status: 200 }
     );
   } catch (error) {
