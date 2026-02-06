@@ -2,26 +2,131 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    /* Light theme variables - optimized for readability */
+    --background: #ffffff;
+    --foreground: #0f172a;
+
+    /* Card and surface colors */
+    --card: #ffffff;
+    --card-foreground: #0f172a;
+
+    --popover: #ffffff;
+    --popover-foreground: #0f172a;
+
+    /* Primary colors - professional navy */
+    --primary: #1e293b;
+    --primary-foreground: #ffffff;
+
+    /* Secondary colors - light gray backgrounds */
+    --secondary: #f8fafc;
+    --secondary-foreground: #334155;
+
+    /* Muted colors for less important content */
+    --muted: #f1f5f9;
+    --muted-foreground: #64748b;
+
+    /* Accent colors */
+    --accent: #f8fafc;
+    --accent-foreground: #1e293b;
+
+    /* Destructive/error colors */
+    --destructive: #ef4444;
+    --destructive-foreground: #ffffff;
+
+    /* Border and input colors */
+    --border: #e2e8f0;
+    --input: #e2e8f0;
+    --ring: #3b82f6;
+
+    --radius: 0.5rem;
+
+    /* Kylie Brand Colors - matching Kylie Audit */
+    --brand-bg: 248 250 252;
+
+    /* Primary Brand Colors */
+    --brand-navy: 215 78% 17%;
+    --brand-teal: 180 65% 42%;
+
+    /* Dark Background Optimized Colors */
+    --brand-teal-light: 175 80% 75%;
+    --text-on-dark: 210 40% 98%;
+    --text-on-dark-muted: 215 30% 80%;
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    color: var(--foreground);
+    background: var(--background);
+    font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+  }
+
+  *:focus-visible {
+    outline: 2px solid #3b82f6;
+    outline-offset: 2px;
+  }
 }
 
 @layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  .bg-brand-bg {
+    background-color: rgb(var(--brand-bg));
+  }
+
+  .bg-brand-navy {
+    background-color: hsl(var(--brand-navy));
+  }
+
+  .bg-brand-teal {
+    background-color: hsl(var(--brand-teal));
+  }
+
+  .text-brand-navy {
+    color: hsl(var(--brand-navy));
+  }
+
+  .text-brand-teal {
+    color: hsl(var(--brand-teal));
+  }
+
+  .text-brand-teal-light {
+    color: hsl(var(--brand-teal-light));
+  }
+
+  .text-on-dark {
+    color: hsl(var(--text-on-dark));
+  }
+
+  .text-on-dark-muted {
+    color: hsl(var(--text-on-dark-muted));
+  }
+
+  .border-brand-navy {
+    border-color: hsl(var(--brand-navy));
+  }
+
+  .border-brand-teal {
+    border-color: hsl(var(--brand-teal));
+  }
+
+  /* Enhanced shadows */
+  .shadow-card {
+    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  }
+
+  .shadow-card-hover {
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -1px rgb(0 0 0 / 0.06);
   }
 }
