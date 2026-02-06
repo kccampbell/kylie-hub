@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { Search, Check, Phone, Lightbulb, ArrowRight, Sparkles, Clock } from 'lucide-react';
+import { Search, Check, Phone, Lightbulb, ArrowRight, Sparkles, Clock, Mail } from 'lucide-react';
+import ContactForm from './components/ContactForm';
 
 export default function KylieHub() {
   return (
@@ -117,6 +118,27 @@ export default function KylieHub() {
               </div>
             </div>
 
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section className="bg-gray-50 py-20 px-6">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center justify-center w-16 h-16 bg-brand-teal/10 rounded-full mb-6">
+              <Mail className="w-8 h-8 text-brand-teal" />
+            </div>
+            <h2 className="text-4xl md:text-5xl font-bold text-brand-navy mb-4">
+              Get in Touch
+            </h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              Have questions about our compliance and verification solutions? We'd love to hear from you.
+            </p>
+          </div>
+          
+          <div className="bg-white rounded-xl p-8 md:p-12 shadow-card border border-gray-100">
+            <ContactForm />
           </div>
         </div>
       </section>
