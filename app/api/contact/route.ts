@@ -42,6 +42,7 @@ export async function POST(request: NextRequest) {
         company,
         phone: cleanPhone,
         message,
+        source: 'kylieai.net',
       }),
     });
 
