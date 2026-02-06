@@ -26,7 +26,7 @@ export default function KylieHub() {
       </header>
 
       {/* Hero Section - Gradient like Kylie Audit */}
-      <section className="bg-gradient-to-br from-brand-navy via-[#0d2847] to-brand-navy py-20 lg:py-28 px-6">
+      <section className="bg-gradient-to-br from-brand-navy via-[#0d2847] to-brand-navy pt-8 lg:pt-12 pb-20 lg:pb-28 px-6">
         <div className="max-w-6xl mx-auto text-center">
           <div className="inline-flex items-center space-x-2 bg-brand-teal/10 border border-brand-teal/30 rounded-full px-4 py-2 mb-6">
             <Sparkles className="h-4 w-4 text-brand-teal-light" />
