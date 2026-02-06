@@ -96,13 +96,6 @@ export default function ContactForm() {
           phone: cleanPhone,
         }),
       });
-      const response = await fetch('/api/contact', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-      });
 
       const data = await response.json();
 
