@@ -1,5 +1,3 @@
 # www.kylieai.net
 User-agent: *
 Allow: /
-
-Sitemap: https://kylieai.net/sitemap.xml
