@@ -1,36 +1,47 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Kylie Hub
 
-## Getting Started
+Public marketing landing page + contact form for the Kylie AI suite (`kylieai.net`).
 
-First, run the development server:
+> 📖 **For a high-level overview of every Kylie product (Audit, Verify, Voice, VaaS, Coach)
+> and how they fit together, see [KYLIE_SUITE_OVERVIEW.md](../KYLIE_SUITE_OVERVIEW.md).**
+
+---
+
+## What this site is
+
+The customer-facing "home" of the suite: a navy hero, four product cards, and a
+contact form. Nothing else lives here — product docs live in each product's repo.
+
+Product cards (in `app/page.tsx`), all live:
+
+| Card | Links to | Icon |
+|---|---|---|
+| Kylie Audit | `audit.kylieai.net` | magnifier |
+| Kylie Verify | `verify.kylieai.net` | check |
+| Kylie Voice | `voice.kylieai.net` | phone handset |
+| Kylie Coach | `coach.kylieai.net` | ascending bars ("New" badge) |
+
+## Brand notes
+
+- **Colours:** navy `#0c264a` (headers/hero/footer), teal `#00D4AA` accents,
+  white/gray-50 content sections. Tokens in `app/globals.css` + `tailwind.config.ts`.
+- **Type:** Geist (self-hosted in `app/fonts/`).
+- **Logo rule:** the **round** speech bubble (`public/kylie-ai-logo.png`) is reserved
+  for the Kylie AI parent brand. **Products use square speech bubbles** with a product
+  glyph — card icons here should match each product's own mark (e.g. Coach's ascending
+  bars, `kylie-coach/dashboard/public/kylie-coach-mark.svg`).
+- Keep card copy honest to what each product actually ships — this page is often the
+  first thing a prospect reads.
+
+## Development & deployment
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev     # http://localhost:3000
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Deployed on **Netlify** (`netlify.toml`, `@netlify/plugin-nextjs`): pushes to `main`
+auto-build and publish to `kylieai.net`. DNS for the whole `kylieai.net` zone is also
+managed in Netlify — product subdomains (e.g. `coach` → Vercel) are records in that zone.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+The contact form posts via `app/api` + `app/components/ContactForm.tsx`.
