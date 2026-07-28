@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { Search, Check, Phone, Lightbulb, ArrowRight, Sparkles, Mail } from 'lucide-react';
+import { Search, Check, Phone, BarChart3, ArrowRight, Sparkles, Mail } from 'lucide-react';
 import ContactForm from './components/ContactForm';
 
 export default function KylieHub() {
@@ -106,7 +106,7 @@ export default function KylieHub() {
                   </span>
                 </div>
                 <div className="w-12 h-12 bg-brand-teal/10 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                  <Lightbulb className="w-6 h-6 text-brand-teal" />
+                  <BarChart3 className="w-6 h-6 text-brand-teal" />
                 </div>
                 <h2 className="text-2xl font-bold text-brand-navy mb-3">Kylie Coach</h2>
                 <p className="text-gray-600 mb-6 flex-grow">
