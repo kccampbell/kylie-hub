@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { Search, Check, Phone, BarChart3, ArrowRight, Sparkles, Mail } from 'lucide-react';
+import { Search, Check, Phone, BarChart3, ArrowRight, Sparkles, Mail, ShieldCheck } from 'lucide-react';
 import ContactForm from './components/ContactForm';
 
 export default function KylieHub() {
@@ -64,9 +64,7 @@ export default function KylieHub() {
 
             {/* Card 2: VERIFY */}
             <Link href="https://verify.kylieai.net" className="group">
-              <div className="bg-white rounded-xl p-8 shadow-card hover:shadow-card-hover transition-all duration-300 border border-gray-100 h-full flex flex-col relative overflow-hidden text-left">
-                {/* Highlight bar for middle product */}
-                <div className="absolute top-0 left-0 w-full h-1 bg-brand-teal" />
+              <div className="bg-white rounded-xl p-8 shadow-card hover:shadow-card-hover transition-all duration-300 border border-gray-100 h-full flex flex-col text-left">
                 <div className="w-12 h-12 bg-brand-teal/10 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                   <Check className="w-6 h-6 text-brand-teal" />
                 </div>
@@ -119,6 +117,32 @@ export default function KylieHub() {
             </Link>
 
           </div>
+
+          {/* Verification-as-a-Service banner */}
+          <Link href="https://verification.kylieai.net" className="group block mt-6">
+            <div className="bg-white/5 border border-brand-teal/30 rounded-xl p-8 md:flex md:items-center md:justify-between md:gap-8 text-left hover:bg-white/10 transition-colors">
+              <div className="flex items-start gap-5">
+                <div className="w-12 h-12 shrink-0 bg-brand-teal/10 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
+                  <ShieldCheck className="w-6 h-6 text-brand-teal-light" />
+                </div>
+                <div>
+                  <h2 className="text-2xl font-bold text-on-dark mb-2">
+                    Kylie Verification
+                    <span className="ml-3 align-middle inline-flex items-center bg-brand-teal/10 border border-brand-teal/30 text-brand-teal-light text-xs font-semibold px-2.5 py-1 rounded-full">
+                      Verification-as-a-Service
+                    </span>
+                  </h2>
+                  <p className="text-on-dark-muted max-w-2xl">
+                    Voice, SMS, WhatsApp and web verification unified in one outcome-based
+                    pipeline. Set your campaign rules once — you only pay for successful verifications.
+                  </p>
+                </div>
+              </div>
+              <div className="flex items-center text-brand-teal-light font-semibold whitespace-nowrap mt-6 md:mt-0 group-hover:translate-x-1 transition-transform">
+                Explore Verification <ArrowRight className="ml-2 w-4 h-4" />
+              </div>
+            </div>
+          </Link>
         </div>
       </section>
 
