@@ -3,7 +3,9 @@
 Public marketing landing page + contact form for the Kylie AI suite (`kylieai.net`).
 
 > 📖 **For a high-level overview of every Kylie product (Audit, Verify, Voice, VaaS, Coach)
-> and how they fit together, see [KYLIE_SUITE_OVERVIEW.md](../KYLIE_SUITE_OVERVIEW.md).**
+> and how they fit together, see
+> [KYLIE_SUITE_OVERVIEW.md](https://github.com/kccampbell/sector3-ops/blob/main/KYLIE_SUITE_OVERVIEW.md)
+> in the sector3-ops repo.**
 
 ---
 
