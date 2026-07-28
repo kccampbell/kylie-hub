@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { Search, Check, Phone, Lightbulb, ArrowRight, Sparkles, Clock, Mail } from 'lucide-react';
+import { Search, Check, Phone, Lightbulb, ArrowRight, Sparkles, Mail } from 'lucide-react';
 import ContactForm from './components/ContactForm';
 
 export default function KylieHub() {
@@ -96,27 +96,27 @@ export default function KylieHub() {
               </div>
             </Link>
 
-            {/* Card 4: COACH - Coming Soon */}
-            <div className="group cursor-default">
-              <div className="bg-white/80 rounded-xl p-8 shadow-card transition-all duration-300 border border-gray-100 h-full flex flex-col text-left relative overflow-hidden">
+            {/* Card 4: COACH */}
+            <Link href="https://coach.kylieai.net" className="group">
+              <div className="bg-white rounded-xl p-8 shadow-card hover:shadow-card-hover transition-all duration-300 border border-gray-100 h-full flex flex-col text-left relative overflow-hidden">
                 <div className="absolute top-4 right-4">
-                  <span className="inline-flex items-center gap-1 bg-amber-100 text-amber-700 text-xs font-semibold px-2 py-1 rounded-full">
-                    <Clock className="w-3 h-3" />
-                    Coming Soon
+                  <span className="inline-flex items-center gap-1 bg-emerald-100 text-emerald-700 text-xs font-semibold px-2 py-1 rounded-full">
+                    <Sparkles className="w-3 h-3" />
+                    New
                   </span>
                 </div>
-                <div className="w-12 h-12 bg-brand-teal/10 rounded-lg flex items-center justify-center mb-6">
+                <div className="w-12 h-12 bg-brand-teal/10 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                   <Lightbulb className="w-6 h-6 text-brand-teal" />
                 </div>
                 <h2 className="text-2xl font-bold text-brand-navy mb-3">Kylie Coach</h2>
                 <p className="text-gray-600 mb-6 flex-grow">
-                  Real-time AI coaching for field teams. Elevate performance with instant feedback on pitch delivery and engagement techniques.
+                  AI coaching for face-to-face sales teams. Every booth and doorstep conversation captured, scored against your own rubric, with provable consent and PII-redacted records.
                 </p>
-                <div className="flex items-center text-gray-400 font-semibold">
-                  Coming Soon <Clock className="ml-2 w-4 h-4" />
+                <div className="flex items-center text-brand-teal font-semibold group-hover:translate-x-1 transition-transform">
+                  Launch Coach <ArrowRight className="ml-2 w-4 h-4" />
                 </div>
               </div>
-            </div>
+            </Link>
 
           </div>
         </div>
