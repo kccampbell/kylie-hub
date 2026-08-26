@@ -173,6 +173,10 @@ export default function KylieHub() {
           <div className="border-t border-white/20 pt-8 text-center">
             <p className="text-on-dark-muted">
               © {new Date().getFullYear()} Kylie AI. All rights reserved.
+              {' '}&middot;{' '}
+              <Link href="/privacy" className="hover:text-white underline underline-offset-4">
+                Privacy Policy
+              </Link>
             </p>
           </div>
         </div>
