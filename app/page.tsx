@@ -177,6 +177,10 @@ export default function KylieHub() {
               <Link href="/privacy" className="hover:text-white underline underline-offset-4">
                 Privacy Policy
               </Link>
+              {' '}&middot;{' '}
+              <Link href="/terms" className="hover:text-white underline underline-offset-4">
+                Terms of Service
+              </Link>
             </p>
           </div>
         </div>
