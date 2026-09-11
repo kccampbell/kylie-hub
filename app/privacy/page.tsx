@@ -8,7 +8,7 @@ export const metadata: Metadata = {
     'Privacy Policy for Sector 3 Solutions Pty Ltd, operator of the Kylie AI suite (kylieai.net).',
 };
 
-const LAST_UPDATED = 'August 2026';
+const LAST_UPDATED = 'September 2026';
 
 export default function PrivacyPolicy() {
   return (
@@ -123,10 +123,13 @@ export default function PrivacyPolicy() {
                 WhatsApp, email and voice communications where a product requires them.</li>
             </ul>
             <p className="mt-3">
-              Some providers (including Stripe) may process information outside Australia. Where
-              this occurs, we take reasonable steps to ensure the information is handled
-              consistently with the APPs. Client service data processed by our platforms is
-              stored in Australia.
+              Some providers (including Stripe) may process information outside Australia, and
+              speech recognition for our Australian region is performed by a specialist provider
+              in the United States that receives audio only to transcribe it. Where this occurs,
+              we take reasonable steps to ensure the information is handled consistently with
+              the APPs. Client service data processed by our platforms is stored in the region
+              in which the client&rsquo;s service is provisioned: Australia, or Ireland for
+              clients on our European deployment. It is not copied between regions.
             </p>
           </section>
 
@@ -136,7 +139,8 @@ export default function PrivacyPolicy() {
               <li>Data is encrypted in transit and at rest</li>
               <li>Access is restricted to authorised personnel and protected by
                 multi-factor authentication</li>
-              <li>Client platform data is stored in Australian data centres</li>
+              <li>Client platform data is stored in data centres in the client&rsquo;s service
+                region (Australia, or Ireland for our European deployment)</li>
               <li>Source recordings are retained only transiently — deleted promptly after
                 processing in accordance with each product&rsquo;s retention schedule</li>
             </ul>
@@ -150,7 +154,11 @@ export default function PrivacyPolicy() {
               the client relationship; upon termination, client data is deleted within 30 days
               with written confirmation. Product-specific retention periods (for example, the
               deletion of audio files within 24 hours of processing by Kylie Audit) are set out
-              in each product&rsquo;s documentation.
+              in each product&rsquo;s documentation. Kylie Coach practice recordings and their
+              transcripts are deleted automatically once older than the client&rsquo;s retention
+              period (90 days unless agreed otherwise), while scores and coaching history are
+              kept for the term of the service; the full statement of where Kylie Coach data
+              lives and how long it is kept is at coach.kylieai.net/security.
             </p>
           </section>
 
