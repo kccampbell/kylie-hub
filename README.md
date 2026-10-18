@@ -2,7 +2,7 @@
 
 Public marketing landing page + contact form for the Kylie AI suite (`kylieai.net`).
 
-> 📖 **For a high-level overview of every Kylie product (Audit, Verify, Voice, VaaS, Coach)
+> 📖 **For a high-level overview of every Kylie product (Audit, Verify, Voice, Connect, VaaS, Coach)
 > and how they fit together, see
 > [KYLIE_SUITE_OVERVIEW.md](https://github.com/kccampbell/sector3-ops/blob/main/KYLIE_SUITE_OVERVIEW.md)
 > in the sector3-ops repo.**
@@ -11,10 +11,10 @@ Public marketing landing page + contact form for the Kylie AI suite (`kylieai.ne
 
 ## What this site is
 
-The customer-facing "home" of the suite: a navy hero, four product cards, and a
-contact form. Nothing else lives here — product docs live in each product's repo.
+The customer-facing "home" of the suite: a navy hero, five product cards, the
+Kylie Verification banner, and a contact form. Nothing else lives here — product docs live in each product's repo.
 
-Product cards (in `app/page.tsx`), all live:
+Product cards (in `app/page.tsx`):
 
 | Card | Links to | Icon |
 |---|---|---|
@@ -22,6 +22,7 @@ Product cards (in `app/page.tsx`), all live:
 | Kylie Verify | `verify.kylieai.net` | check |
 | Kylie Voice | `voice.kylieai.net` | phone handset |
 | Kylie Coach | `coach.kylieai.net` | ascending bars ("New" badge) |
+| Kylie Connect | `#contact` (no public app yet; "Early access" badge) | handset with outbound arrow |
 
 ## Brand notes
 
@@ -31,7 +32,8 @@ Product cards (in `app/page.tsx`), all live:
 - **Logo rule:** the **round** speech bubble (`public/kylie-ai-logo.png`) is reserved
   for the Kylie AI parent brand. **Products use square speech bubbles** with a product
   glyph — card icons here should match each product's own mark (e.g. Coach's ascending
-  bars, `kylie-coach/dashboard/public/kylie-coach-mark.svg`).
+  bars, `kylie-coach/dashboard/public/kylie-coach-mark.svg`; Connect's handset with
+  outbound arrow, `kylie-connect/docs/brand/kylie-connect-mark.svg`).
 - Keep card copy honest to what each product actually ships — this page is often the
   first thing a prospect reads.
 

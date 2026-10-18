@@ -3,7 +3,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Kylie AI - Trust & Verification Suite",
-  description: "The complete suite for automated compliance auditing, supplier verification, and AI-driven voice interactions.",
+  description: "The complete suite for automated compliance auditing, supplier verification, AI-driven voice interactions and outbound AI calling.",
 };
 
 export default function RootLayout({

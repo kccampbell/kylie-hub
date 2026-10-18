@@ -53,7 +53,7 @@ export default function TermsOfService() {
               suite of services operated by Sector 3 Solutions Pty Ltd
               (&ldquo;Sector 3&rdquo;, &ldquo;we&rdquo;, &ldquo;us&rdquo;), including this
               website (kylieai.net) and the Kylie Audit, Kylie Verify, Kylie Voice, Kylie
-              Coach and Kylie Verification products available on subdomains of kylieai.net
+              Coach, Kylie Connect and Kylie Verification products available on subdomains of kylieai.net
               (together, the &ldquo;Services&rdquo;).
             </p>
             <p className="mt-3">

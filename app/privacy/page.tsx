@@ -52,7 +52,7 @@ export default function PrivacyPolicy() {
               Sector 3 Solutions Pty Ltd (&ldquo;Sector 3&rdquo;, &ldquo;we&rdquo;,
               &ldquo;us&rdquo;) operates the Kylie AI suite of compliance and
               verification services, including this website (kylieai.net) and the Kylie Audit,
-              Kylie Verify, Kylie Voice, Kylie Coach and Kylie Verification products available
+              Kylie Verify, Kylie Voice, Kylie Coach, Kylie Connect and Kylie Verification products available
               on subdomains of kylieai.net.
             </p>
             <p className="mt-3">

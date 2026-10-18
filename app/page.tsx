@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { Search, Check, Phone, BarChart3, ArrowRight, Sparkles, Mail, ShieldCheck } from 'lucide-react';
+import { Search, Check, Phone, PhoneOutgoing, BarChart3, ArrowRight, Sparkles, Mail, ShieldCheck } from 'lucide-react';
 import ContactForm from './components/ContactForm';
 
 export default function KylieHub() {
@@ -40,11 +40,12 @@ export default function KylieHub() {
 
           <p className="text-xl text-on-dark-muted mb-16 max-w-3xl mx-auto">
             The complete suite for automated compliance auditing, supplier verification,
-            and AI-driven voice interactions. Built for regulated industries.
+            AI-driven voice interactions and outbound AI calling. Built for regulated industries
+            and field sales teams.
           </p>
 
           {/* Product Cards */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 max-w-7xl mx-auto">
 
             {/* Card 1: AUDIT */}
             <Link href="https://audit.kylieai.net" className="group">
@@ -52,7 +53,7 @@ export default function KylieHub() {
                 <div className="w-12 h-12 bg-brand-teal/10 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                   <Search className="w-6 h-6 text-brand-teal" />
                 </div>
-                <h2 className="text-2xl font-bold text-brand-navy mb-3">Kylie Audit</h2>
+                <h2 className="text-2xl xl:text-xl font-bold text-brand-navy mb-3">Kylie Audit</h2>
                 <p className="text-gray-600 mb-6 flex-grow">
                   Automated quality assurance and auditing for recorded telephone calls. Ensure 100% compliance across your contact center.
                 </p>
@@ -68,7 +69,7 @@ export default function KylieHub() {
                 <div className="w-12 h-12 bg-brand-teal/10 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                   <Check className="w-6 h-6 text-brand-teal" />
                 </div>
-                <h2 className="text-2xl font-bold text-brand-navy mb-3">Kylie Verify</h2>
+                <h2 className="text-2xl xl:text-xl font-bold text-brand-navy mb-3">Kylie Verify</h2>
                 <p className="text-gray-600 mb-6 flex-grow">
                   Instant supplier verification via SMS and WhatsApp. Confirm identity and details securely before engagement.
                 </p>
@@ -84,9 +85,9 @@ export default function KylieHub() {
                 <div className="w-12 h-12 bg-brand-teal/10 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                   <Phone className="w-6 h-6 text-brand-teal" />
                 </div>
-                <h2 className="text-2xl font-bold text-brand-navy mb-3">Kylie Voice</h2>
+                <h2 className="text-2xl xl:text-xl font-bold text-brand-navy mb-3">Kylie Voice</h2>
                 <p className="text-gray-600 mb-6 flex-grow">
-                  AI-driven outbound verification calling. Automate face-to-face donor confirmation and data validation calls.
+                  AI verification calling for charities and fundraising agencies. Automate donor confirmation and data validation calls.
                 </p>
                 <div className="flex items-center text-brand-teal font-semibold group-hover:translate-x-1 transition-transform">
                   Launch Voice <ArrowRight className="ml-2 w-4 h-4" />
@@ -106,12 +107,34 @@ export default function KylieHub() {
                 <div className="w-12 h-12 bg-brand-teal/10 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                   <BarChart3 className="w-6 h-6 text-brand-teal" />
                 </div>
-                <h2 className="text-2xl font-bold text-brand-navy mb-3">Kylie Coach</h2>
+                <h2 className="text-2xl xl:text-xl font-bold text-brand-navy mb-3">Kylie Coach</h2>
                 <p className="text-gray-600 mb-6 flex-grow">
                   AI coaching for face-to-face sales teams. Every booth and doorstep conversation captured, scored against your own rubric, with provable consent and PII-redacted records.
                 </p>
                 <div className="flex items-center text-brand-teal font-semibold group-hover:translate-x-1 transition-transform">
                   Launch Coach <ArrowRight className="ml-2 w-4 h-4" />
+                </div>
+              </div>
+            </Link>
+
+            {/* Card 5: CONNECT */}
+            <Link href="#contact" className="group">
+              <div className="bg-white rounded-xl p-8 shadow-card hover:shadow-card-hover transition-all duration-300 border border-gray-100 h-full flex flex-col text-left relative overflow-hidden">
+                <div className="absolute top-4 right-4">
+                  <span className="inline-flex items-center gap-1 bg-emerald-100 text-emerald-700 text-xs font-semibold px-2 py-1 rounded-full">
+                    <Sparkles className="w-3 h-3" />
+                    Early access
+                  </span>
+                </div>
+                <div className="w-12 h-12 bg-brand-teal/10 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                  <PhoneOutgoing className="w-6 h-6 text-brand-teal" />
+                </div>
+                <h2 className="text-2xl xl:text-xl font-bold text-brand-navy mb-3">Kylie Connect</h2>
+                <p className="text-gray-600 mb-6 flex-grow">
+                  The outbound AI sales agent and dialler. Works your call list, holds a natural conversation inside your script and rules, handles objections and hands you the lead.
+                </p>
+                <div className="flex items-center text-brand-teal font-semibold group-hover:translate-x-1 transition-transform">
+                  Talk to us <ArrowRight className="ml-2 w-4 h-4" />
                 </div>
               </div>
             </Link>
@@ -147,7 +170,7 @@ export default function KylieHub() {
       </section>
 
       {/* Contact Section */}
-      <section className="bg-gray-50 py-20 px-6">
+      <section id="contact" className="bg-gray-50 py-20 px-6 scroll-mt-24">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
             <div className="inline-flex items-center justify-center w-16 h-16 bg-brand-teal/10 rounded-full mb-6">
